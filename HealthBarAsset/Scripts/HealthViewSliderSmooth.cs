@@ -35,8 +35,7 @@ public class HealthViewSliderSmooth : MonoBehaviour
         float time = 1f;
         while (time > 0)
         {
-            float newValue = Mathf.MoveTowards(_slider.value, value, _speed * Time.deltaTime);
-            _slider.value = newValue;
+            _slider.value = Mathf.MoveTowards(_slider.value, value, _speed * Time.deltaTime);
             time -= Time.deltaTime;
             yield return null;
         }
